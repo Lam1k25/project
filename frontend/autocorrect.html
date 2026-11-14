@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Text Corrector — Corporate Messenger</title>
+    <link rel="stylesheet" href="messenger.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h1>Corporate Messenger</h1>
+            <nav aria-label="Main navigation">
+                <a href="messenger.html">Chats</a>
+                <a href="ai-chat.html">AI Assistant</a>
+                <a class="current-page" href="autocorrect.html">Russian Text Corrector</a>
+                <a href="news.html">News</a>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <header id="header">
+                <h2 id="page-title">Russian Text Corrector</h2>
+            </header>
+
+            <section id="chat-area" aria-label="Text correction">
+                <div id="messages" class="message-list" aria-live="polite">
+                    <article class="chat-message">
+                        <strong>Russian Text Corrector</strong>
+                        <p>Paste Russian text to correct spelling, punctuation, grammar, and word choice while preserving its meaning and style.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer id="message-area">
+                <form id="message-form">
+                    <label for="message-input">Russian text to correct</label>
+                    <textarea id="message-input" name="message" placeholder="Paste or type Russian text here..." maxlength="4000" spellcheck="true" required></textarea>
+                    <button type="submit" id="send-button">Correct text</button>
+                </form>
+                <p id="message-status" class="feedback" role="status" aria-live="polite" hidden></p>
+                <p class="prototype-note">Do not paste passwords or confidential information.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="messenger.js?v=ai-markdown"></script>
+</body>
+</html>

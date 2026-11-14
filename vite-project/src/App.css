@@ -1,0 +1,131 @@
+.registration-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.registration-card {
+  width: min(100%, 440px);
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.registration-card h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.description {
+  margin-top: 12px;
+  color: var(--text);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.registration-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.registration-form h2 {
+  margin: 20px 0 2px;
+  font-size: 19px;
+}
+
+.registration-card .text-button,
+.registration-card .secondary-button {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.registration-card .text-button {
+  padding-inline: 0;
+  border: 0;
+  text-align: left;
+}
+
+.registration-card .secondary-button {
+  width: 100%;
+  color: #b42318;
+}
+
+.registration-form label {
+  margin-top: 8px;
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.registration-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.registration-form input:focus-visible,
+.registration-form button:focus-visible {
+  outline: 3px solid var(--accent-border);
+  outline-offset: 2px;
+}
+
+.registration-form button {
+  margin-top: 12px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.registration-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.success {
+  color: #15803d;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+@media (max-width: 520px) {
+  .registration-card {
+    padding: 28px 22px;
+  }
+}

@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: lamik-messenger
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lamik-messenger-db
+          property: connectionString
+      - key: CLOUDFLARE_ACCOUNT_ID
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_MODEL
+        value: "@cf/zai-org/glm-4.7-flash"
+
+databases:
+  - name: lamik-messenger-db
+    plan: free
+    region: frankfurt
+    databaseName: lamik_messenger
+    user: lamik_messenger
