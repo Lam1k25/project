@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News — Corporate Messenger</title>
+    <link rel="stylesheet" href="messenger.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h1>Corporate Messenger</h1>
+            <nav aria-label="Main navigation">
+                <a href="messenger.html">Chats</a>
+                <a href="ai-chat.html">AI Assistant</a>
+                <a href="autocorrect.html">Russian Text Corrector</a>
+                <a class="current-page" href="news.html">News</a>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <header id="header">
+                <h2 id="page-title">Company News</h2>
+            </header>
+
+            <section id="chat-area" class="news-area" aria-label="News feed">
+                <article class="news-card">
+                    <span class="news-date">October 28, 2026</span>
+                    <h3>Team Meeting Recap</h3>
+                    <p>Teams shared their plans for the coming month. The recording and a summary are available in the project workspace.</p>
+                </article>
+                <article class="news-card">
+                    <span class="news-date">October 24, 2026</span>
+                    <h3>Workspace Update</h3>
+                    <p>The messenger now has dedicated pages for the AI assistant, Russian text correction, and company news.</p>
+                </article>
+                <article class="news-card">
+                    <span class="news-date">October 20, 2026</span>
+                    <h3>Announcements and Events</h3>
+                    <p>Stay up to date with team updates and important events in this feed.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="messenger.js?v=english-ai-modes"></script>
+</body>
+</html>

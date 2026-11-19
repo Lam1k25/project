@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Messenger</title>
+    <link rel="stylesheet" href="messenger.css">
+</head>
+<body>
+
+    <section id="auth-panel" class="auth-panel" aria-labelledby="auth-title">
+        <p class="auth-eyebrow">Corporate Messenger</p>
+        <h1 id="auth-title">Sign in</h1>
+        <p id="auth-description">Sign in to open your chats.</p>
+        <form id="auth-form">
+            <label id="auth-name-label" for="auth-name" hidden>Name</label>
+            <input id="auth-name" name="name" autocomplete="name" maxlength="80" hidden>
+            <label for="auth-email">Email</label>
+            <input id="auth-email" name="email" type="email" autocomplete="email" required maxlength="254">
+            <label for="auth-password">Password</label>
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" required minlength="10" maxlength="128">
+            <button type="submit" id="auth-submit">Sign in</button>
+        </form>
+        <button type="button" class="link-button" id="auth-toggle">Don't have an account? Sign up</button>
+        <p id="auth-status" class="feedback" role="alert" hidden></p>
+    </section>
+
+    <div id="app" hidden>
+
+        <aside id="sidebar">
+            <h1>Corporate Messenger</h1>
+
+            <nav aria-label="Main navigation">
+                <a class="current-page" href="messenger.html">Chats</a>
+                <a href="ai-chat.html">AI Assistant</a>
+                <a href="autocorrect.html">Russian Text Corrector</a>
+                <a href="news.html">News</a>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+
+            <header id="header">
+                <h2 id="page-title">My Messages</h2>
+                <div class="account-toolbar">
+                    <span id="current-user"></span>
+                    <details class="account-menu">
+                        <summary>Account settings</summary>
+                        <div class="account-menu-content">
+                            <form id="profile-form">
+                                <h3>Profile</h3>
+                                <label for="profile-name">Name</label>
+                                <input id="profile-name" name="name" required maxlength="80">
+                                <label for="profile-email">Email</label>
+                                <input id="profile-email" name="email" type="email" required maxlength="254">
+                                <button type="submit">Save profile</button>
+                            </form>
+                            <form id="password-form">
+                                <h3>Change password</h3>
+                                <label for="current-password">Current password</label>
+                                <input id="current-password" name="current_password" type="password" required maxlength="128">
+                                <label for="new-password">New password (at least 10 characters)</label>
+                                <input id="new-password" name="new_password" type="password" required minlength="10" maxlength="128">
+                                <button type="submit">Change password</button>
+                            </form>
+                            <button type="button" id="logout-button" class="secondary-button">Sign out</button>
+                            <p id="account-status" role="status" hidden></p>
+                        </div>
+                    </details>
+                </div>
+                <div id="chat-controls">
+                    <label>
+                        Chat with
+                        <select id="recipient-select" name="recipient"></select>
+                    </label>
+                </div>
+                <p id="message-status" role="alert" hidden></p>
+            </header>
+
+            <section id="chat-area" aria-label="Conversation">
+                <div id="messages" class="message-list" aria-live="polite"></div>
+            </section>
+
+            <footer id="message-area">
+                <form id="message-form">
+                    <label for="message-input">Message</label>
+                    <textarea
+                        id="message-input"
+                        name="message"
+                        placeholder="Write a message..."
+                        spellcheck="true"
+                        maxlength="4000"
+                        required
+                    ></textarea>
+
+                    <button type="submit" id="send-button">
+                        Send
+                    </button>
+                </form>
+
+                <div id="ai-tools">
+                    <a href="ai-chat.html">Open AI Assistant</a>
+                    <a href="autocorrect.html">Open Russian Text Corrector</a>
+
+                    <a href="news.html">Open News</a>
+                </div>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="messenger.js?v=english-ai-modes"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant — Corporate Messenger</title>
+    <link rel="stylesheet" href="messenger.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h1>Corporate Messenger</h1>
+            <nav aria-label="Main navigation">
+                <a href="messenger.html">Chats</a>
+                <a class="current-page" href="ai-chat.html">AI Assistant</a>
+                <a href="autocorrect.html">Russian Text Corrector</a>
+                <a href="news.html">News</a>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <header id="header">
+                <h2 id="page-title">AI Assistant</h2>
+            </header>
+
+            <section id="chat-area" aria-label="AI conversation">
+                <div id="messages" class="message-list" aria-live="polite">
+                    <article class="chat-message">
+                        <strong>Lamik AI</strong>
+                        <p>Hello! I can help answer questions, explain ideas, and assist with your work. How can I help?</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer id="message-area">
+                <form id="message-form">
+                    <label for="message-input">Your message</label>
+                    <textarea id="message-input" name="message" placeholder="Ask the AI assistant..." maxlength="4000" spellcheck="true" required></textarea>
+                    <button type="submit" id="send-button">Send</button>
+                </form>
+                <p id="message-status" class="feedback" role="status" aria-live="polite" hidden></p>
+                <p class="prototype-note">Do not send passwords or confidential information to the AI.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="messenger.js?v=ai-markdown"></script>
+</body>
+</html>
