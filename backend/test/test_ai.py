@@ -8,7 +8,7 @@ from openai import APIConnectionError, APITimeoutError
 from pydantic import ValidationError
 
 if __package__:
-    from .ai import (
+    from ..ai import (
         ASSISTANT_SYSTEM_PROMPT,
         CORRECTOR_SYSTEM_PROMPT,
         AIChatMessage,
@@ -16,7 +16,7 @@ if __package__:
         generate_ai_response,
     )
 else:
-    from ai import (
+    from backend.ai import (
         ASSISTANT_SYSTEM_PROMPT,
         CORRECTOR_SYSTEM_PROMPT,
         AIChatMessage,

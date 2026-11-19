@@ -1,9 +1,9 @@
 import unittest
 
 if __package__:
-    from .database import normalize_database_url
+    from ..database import normalize_database_url
 else:
-    from database import normalize_database_url
+    from backend.database import normalize_database_url
 
 
 class DatabaseUrlTests(unittest.TestCase):

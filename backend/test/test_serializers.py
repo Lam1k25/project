@@ -4,13 +4,13 @@ from sqlalchemy import create_engine, event
 from sqlalchemy.orm import Session, joinedload
 
 if __package__:
-    from .database import Base
-    from .models import Message, User
-    from .serializers import serialize_message
+    from ..database import Base
+    from ..models import Message, User
+    from ..serializers import serialize_message
 else:
-    from database import Base
-    from models import Message, User
-    from serializers import serialize_message
+    from backend.database import Base
+    from backend.models import Message, User
+    from backend.serializers import serialize_message
 
 
 class MessageSerializerTests(unittest.TestCase):
